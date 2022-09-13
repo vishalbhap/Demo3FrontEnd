@@ -1,0 +1,117 @@
+<!-- <p>edit-food works!</p>
+
+
+<div class="mainDiv">
+    <form [formGroup]='foodForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+        <div class="container">
+            <h1><strong>Edit Food</strong></h1>
+
+
+            <hr>
+
+
+            <label><strong>FoodName</strong></label>
+            <input type="text" placeholder="Enter Name" formControlName="foodName" required>
+           
+
+
+
+            <label for="price"><strong>Price</strong></label>
+            <input type="text" placeholder="Enter Price" name="price" formControlName="price" required>
+
+
+
+           
+            <label for="foodCategory"><strong>Category</strong></label>
+            <input type="text" placeholder="Enter category" name="foodCategory" formControlName="foodCategory" required>
+          
+
+
+
+           
+      
+        </div>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Edit Food</button>
+        </div>
+
+    </form>
+
+
+</div> -->
+
+
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" id="name">
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+            width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+            <!-- <h1>Navbar</h1> -->
+        </a>
+        <a class="navbar-brand" href="#">Edit Restaurant Food Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+     
+        <div class="d-flex align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">     
+    
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/restaurantHome">Back</a>
+            </li>  
+    
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="" (click)="signOut()">SignOut</a>
+              </li>  
+          
+          </ul>
+         </div>
+      </nav>
+    
+    
+    
+    <div class="mainDiv">
+        <form [formGroup]='foodForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+            <div class="container">
+                <h1><strong>Edit Food</strong></h1>
+    
+    
+                <hr>
+    
+    
+                <label><strong>FoodName</strong></label>
+                <input type="text" placeholder="Enter Name" formControlName="foodName" required>
+                <span class="help-bpx" *ngIf="foodName?.touched && !foodName?.valid">Please Enter valid Food Name</span><p></p>
+    
+    
+    
+                <label for="price"><strong>Price</strong></label>
+                <input type="text" placeholder="Enter Price" name="price" formControlName="price" required>
+                <span class="help-bpx" *ngIf="price?.touched && !price?.valid">Please Enter valid price</span><p>
+    
+    
+               
+                <label for="foodCategory"><strong>Category</strong></label>
+                <input type="text" placeholder="Enter category" name="foodCategory" formControlName="foodCategory" required>
+                <span class="help-bpx" *ngIf="foodCategory?.touched && !foodCategory?.valid">Please Enter valid foodCategory </span><p>
+    
+    
+    
+               
+          
+            </div>
+    
+            <div class="clearfix">
+                <button type="submit" class="signupbtn" [disabled]="!foodForm.valid">Edit Food</button>
+            </div>
+    
+        </form>
+    
+    
+    </div>
+    
+    </body>

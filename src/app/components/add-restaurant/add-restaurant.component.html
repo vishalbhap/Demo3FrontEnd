@@ -1,0 +1,129 @@
+<!-- <p>add-restaurant works!</p>
+
+<div class="container">
+    
+    <form [formGroup]='restForm'  (ngSubmit)='onSubmit()'>
+  
+      <mat-form-field appearance="fill">
+        <label>Restaurant Name</label>
+        <input matInput formControlName="restaurantName">
+      </mat-form-field>
+      <br>
+    
+      <mat-form-field appearance="fill">
+        <label>User Name</label>
+        <input matInput formControlName="restaurantUserName">
+      </mat-form-field>
+      <br>
+    
+      <mat-form-field appearance="fill">
+        <label>Password</label>
+        <input matInput formControlName="restaurantPassword">
+      </mat-form-field>
+      <br>
+    
+      <mat-form-field appearance="fill">
+        <label>Email</label>
+        <input matInput formControlName="restaurantEmail">
+      </mat-form-field>
+      <br>
+    
+      <div formGroupName="address">
+    
+        <mat-form-field appearance="fill">
+          <label>Area</label>
+          <input matInput formControlName="area">
+        </mat-form-field>
+        <br>
+    
+        <mat-form-field appearance="fill">
+          <label>Street</label>
+          <input matInput formControlName="street">
+        </mat-form-field>
+        <br>
+    
+        <mat-form-field appearance="fill">
+          <label>Pincode</label>
+          <input matInput formControlName="pincode">
+        </mat-form-field>
+    
+      </div>
+    
+      <button>Submit</button>
+    </form>
+  
+    </div> -->
+
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Resgister Restaurant</a>
+      <a class="navbar-brand" href="#" id="name">
+        <img
+          src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+          width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+          <!-- <h1>Navbar</h1> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">      
+        </ul>
+     
+      </div>
+    </nav>
+    
+    
+    
+    <form [formGroup]='restForm'  (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+      <div class="container">
+        <h1 style="text-align: center;"><strong>Fill Restaurant Details</strong></h1>
+        <hr>
+        
+        <label><b>Name</b></label>
+        <input type="text" placeholder="Enter Name"  formControlName="restaurantName"required> 
+        <span class="help-bpx" *ngIf="restaurantName?.touched && !restaurantName?.valid">Please Enter valid restaurant Name</span><p>
+    
+        <label for="UserName"><b>Enter user Name</b></label>
+        <input type="text" placeholder="Enter userName" name="UserName" formControlName="restaurantUserName" required> 
+        <span class="help-bpx" *ngIf="restaurantUserName?.touched && !restaurantUserName?.valid">Please Enter valid restaurant User Name</span><p>
+    
+        <label for="psw"><b>Password</b></label>
+         <input type="password" placeholder="Enter Password" name="psw" formControlName="restaurantPassword" required> 
+         <span class="help-bpx" *ngIf="restaurantPassword?.touched && !restaurantPassword?.valid">Please Enter valid Password</span><p>
+    
+        <label for="email"><b>Email</b></label>
+       <input type="text" placeholder="Enter Email" name="email" formControlName="restaurantEmail" required>
+       <span class="help-bpx" *ngIf="restaurantEmail?.touched && !restaurantEmail?.valid">Please Enter valid restaurant Email</span><p>
+    
+        <div formGroupName="address">
+       
+            <label for="area"><b>Area</b></label>
+            <input type="text" placeholder="Enter Area" name="area" formControlName="area" required> 
+            <span class="help-bpx" *ngIf="area?.touched && !area?.valid">Please Enter valid Area</span><p>
+    
+          <br>
+        <label for="street"><b>Street</b></label>
+        <input type="text" placeholder="Enter Street" name="street" formControlName="street" required> 
+          <span class="help-bpx" *ngIf="street?.touched && !street?.valid">Please Enter valid Street Name</span><p>
+    
+    
+          <br>
+            <label for="pincode"><b>Pincode</b></label>
+            <input type="text" placeholder="Enter pincode" name="pincode" formControlName="pincode" required> 
+            <span class="help-bpx" *ngIf="pincode?.touched && !pincode?.valid">Please Enter valid Pincode</span><p>
+        </div>
+    
+        <div class="clearfix">
+          <button type="submit" class="signupbtn"  [disabled]="!restForm.valid">Register</button>
+        </div>
+      </div>
+    </form>
+    
+    
+    
+    
+    
+    </body>
+    

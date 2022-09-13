@@ -1,0 +1,56 @@
+<!-- <p>admin-login works!</p>
+
+<form [formGroup]='loginForm'  (ngSubmit)='onSubmit()'>
+    <label for="userEmail">Email: </label>
+    <input type="text"  formControlName="userEmail">
+
+    <label for="userPassword">Password: </label>
+    <input type="text"  formControlName="userPassword">
+
+    <button>Submit</button>
+</form> -->
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" id="name">
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+        width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+        <!-- <h1>Navbar</h1> -->
+    </a>
+    <a class="navbar-brand" href="#">Admin Login</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+     
+ 
+
+
+
+<body>
+    <!-- <div class="container"> <h1>Admin Login</h1></div> -->
+   
+<form [formGroup]='loginForm'  (ngSubmit)='onSubmit()'>
+<!-- <form action="/action_page.php" method="post"> -->
+    <div class="imgcontainer">
+       <img src="../../../assets/images/img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="Email" formControlName="userEmail" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" formControlName="userPassword" required>
+          
+      <button type="submit"  type="submit" [disabled]="!loginForm.valid">Login</button>
+    </div>
+
+    
+  </form>
+    
+</body>
+

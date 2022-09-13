@@ -1,0 +1,84 @@
+<!-- <p>update-user-profile works!</p>
+
+<div class="mainDiv">
+    <form [formGroup]='userUpdateForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+        <div class="container">
+            <h1><strong>Update User Profile</strong></h1>
+            <hr>
+            <label><strong>User Name</strong></label>
+            <input type="text" placeholder="Enter Name" formControlName="userName" required>         
+
+            <label for="price"><strong>Mobile Number</strong></label>
+            <input type="text" placeholder="Enter Mobile" name="price" formControlName="userMobileNo" required>           
+      
+        </div>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Update</button>
+        </div>
+
+    </form>
+
+
+</div> -->
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" id="name">
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+            width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+      
+        </a>
+        <a class="navbar-brand" href="#">User Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="d-flex align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">    
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/userHome">Back</a>
+            </li>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="/userHome">Logout</a>
+              </li>  
+          
+          </ul>
+         </div>
+      </nav>
+      
+    
+    <p>update-user-profile works!</p>
+    
+    <div class="mainDiv">
+        <form [formGroup]='userUpdateForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+            <div class="container">
+                <h1 style="text-align: center;"><strong>Update User Profile</strong></h1>
+                <hr>
+                <label><strong>User Name</strong></label>
+                <input type="text" placeholder="Enter Name" formControlName="userName" required>
+                <span class="help-bpx" *ngIf="userName?.touched && !userName?.valid">Please Enter valid Name </span><p>
+             
+    
+                <label for="price"><strong>Mobile Number</strong></label>
+                <input type="text" placeholder="Enter Mobile" formControlName="userMobileNo" required> 
+                <span class="help-bpx" *ngIf="userMobileNo?.touched && !userMobileNo?.valid">Please Enter valid MobileNo </span><p>
+            
+                          
+          
+            </div>
+    
+            <div class="clearfix">
+                <button type="submit" class="signupbtn" [disabled]="!userUpdateForm.valid">Update</button>
+            </div>
+    
+        </form>
+    
+    
+    </div>
+    </body>

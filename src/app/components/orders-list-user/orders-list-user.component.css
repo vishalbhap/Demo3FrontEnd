@@ -1,0 +1,21 @@
+a {
+  font: 25px italic;
+  color: white;
+}
+
+ul {
+  padding-left: 1000px;
+}
+
+th {
+  font-size: 22px;
+  text-align: center;
+}
+
+td {
+  font-size: 15px;
+  font-weight: bold;
+  font: italic;
+  text-align: center;
+}
+/*# sourceMappingURL=orders-list-user.component.css.map */

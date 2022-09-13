@@ -1,0 +1,115 @@
+<!-- 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Restaurant List</a>
+    <a class="navbar-brand" href="#" id="name">
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+        width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">      
+      </ul>
+   
+    </div>
+  </nav>
+
+  
+  <h1><button class="nav-link" (click) = "exportRestaurantDetails()" >Export Restaurant Details</button></h1>
+
+
+    <table  class="table">
+        <thead>
+          <tr>
+         
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            
+            <th scope="col">Area</th>
+            <th scope="col">Street</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let restaurant of restArray">
+         
+            <td>{{restaurant.restaurantName}}</td>
+            <td>{{restaurant.restaurantEmail}}</td>
+           
+            <td>{{restaurant.address.area}}</td>
+            <td>{{restaurant.address.street}}</td>
+            <td>{{restaurant.address.pincode}}</td>
+            <td><h4 (click)="deleteRestaurant(restaurant.restId)">Delete Restaurant</h4></td>
+          </tr>
+        
+        </tbody>
+      </table>
+
+  
+   -->
+
+   <body>
+  
+    <div id="main-div">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Restaurant List</a>
+        <a class="navbar-brand" href="#" id="name">
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+            width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+            <!-- <h1>Navbar</h1> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">      
+          </ul>
+       
+        </div>
+      </nav>
+
+      <h1><button class="nav-link" (click) = "exportRestaurantDetails()" >Export Restaurant Details</button></h1>
+    
+      <!-- <style> table.table { background-image: url("../../../assets/images/bg.jpg"); /* image courtesy of subtlepatterns.com */ }
+    
+      </style> -->
+    
+        <table  class="table">
+            <thead>
+              <tr>
+             
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                
+                <th scope="col">Area</th>
+                <th scope="col">Street</th>
+                <th scope="col">Pincode</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let restaurant of restArray">
+             
+                <td>{{restaurant.restaurantName}}</td>
+                <td>{{restaurant.restaurantEmail}}</td>
+               
+                <td>{{restaurant.address.area}}</td>
+                <td>{{restaurant.address.street}}</td>
+                <td>{{restaurant.address.pincode}}</td>
+                <td><button type="button" class="btn btn-danger"(click)="deleteRestaurant(restaurant.restId)">Delete</button></td>
+              </tr>
+            
+            </tbody>
+          </table>
+    
+      
+        </div>
+        
+    </body>

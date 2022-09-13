@@ -1,0 +1,16 @@
+body {
+  background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(142, 204, 213));
+}
+
+th {
+  font-size: 22px;
+  text-align: center;
+}
+
+td {
+  font-size: 15px;
+  font-weight: bold;
+  font: italic;
+  text-align: center;
+}
+/*# sourceMappingURL=users-info.component.css.map */

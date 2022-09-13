@@ -1,0 +1,98 @@
+<!-- <p>rest-update works!</p>
+
+
+<div class="mainDiv">
+    <form [formGroup]='updateRestForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+        <div class="container">
+            <h1><strong>Update Restaurant</strong></h1>
+
+
+            <hr>
+
+
+            <label><strong>Restaurant Name</strong></label>
+            <input type="text" placeholder="Enter Name" formControlName="restaurantName" required>
+
+
+
+            <label for="price"><strong>Restaurant Username</strong></label>
+            <input type="text" placeholder="Enter Username" name="price" formControlName="restaurantUserName" required>
+
+
+            
+        </div>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Update Restaurant</button>
+        </div>
+
+    </form>
+
+
+</div> -->
+
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" id="name">
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+            width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+            <!-- <h1>Navbar</h1> -->
+        </a>
+        <a class="navbar-brand" href="#">Edit Restaurant Profile Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+     
+        <div class="d-flex align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">     
+    
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/restaurantHome">Back</a>
+            </li>  
+    
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="" (click)="signOut()">SignOut</a>
+              </li> 
+          
+          </ul>
+         </div>
+      </nav>
+    
+    
+    
+    <div class="mainDiv">
+        <form [formGroup]='updateRestForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+            <div class="container">
+                <h1><strong>Update Restaurant</strong></h1>
+    
+    
+                <hr>
+    
+    
+                <label><strong>Restaurant Name</strong></label>
+                <input type="text" placeholder="Enter Name" formControlName="restaurantName" required>
+                <span class="help-bpx" *ngIf="restaurantName?.touched && !restaurantName?.valid">Please Enter valid Restaurant Name </span><p>
+    
+    
+    
+                <label for="price"><strong>Restaurant Username</strong></label>
+                <input type="text" placeholder="Enter Username" name="price" formControlName="restaurantUserName" required>
+                <span class="help-bpx" *ngIf="restaurantUserName?.touched && !restaurantUserName?.valid">Please Enter valid Restaurant UserName </span><p></p>
+    
+    
+                
+            </div>
+    
+            <div class="clearfix">
+                <button type="submit" class="signupbtn"  [disabled]="!updateRestForm.valid">Update Restaurant</button>
+            </div>
+    
+        </form>
+    
+    
+    </div>
+    
+    </body>

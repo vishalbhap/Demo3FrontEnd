@@ -1,0 +1,132 @@
+<!-- <p>add-food works!</p>
+
+
+<div class="mainDiv">
+    <form [formGroup]='foodForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+        <div class="container">
+            <h1><strong>Addd Food</strong></h1>
+
+
+            <hr>
+
+
+            <label><strong>FoodName</strong></label>
+            <input type="text" placeholder="Enter Name" formControlName="foodName" required>
+           
+
+
+
+            <label for="price"><strong>Price</strong></label>
+            <input type="text" placeholder="Enter Price" name="price" formControlName="price" required>
+          
+            <label for="offer"><strong>Offer</strong></label>
+            <input type="text" placeholder="Enter offer" name="offer" formControlName="offer" required>
+           
+
+            <label for="foodCategory"><strong>Category</strong></label>
+            <input type="text" placeholder="Enter category" name="foodCategory" formControlName="foodCategory" required>
+      
+
+
+
+            <label for="quantity"><strong>Quantity</strong></label>
+            <input type="text" placeholder="Enter quantity" name="quantity" formControlName="quantity" required>
+          
+            <br>
+          
+      
+        </div>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Add Food</button>
+        </div>
+
+    </form>
+
+
+</div> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"  id="name">
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+        width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+    </a>
+      <a class="navbar-brand" >Restaurant Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">       
+           
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/restaurantHome">Back</a>
+          </li>  
+    
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="" (click)="signOut()">SignOut</a>
+            </li> 
+        </ul>  
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+<div class="mainDiv">
+    <form [formGroup]='foodForm' (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+        <div class="container">
+            <h1><strong>Addd Food</strong></h1>
+
+
+            <hr>
+
+
+            <label><strong>FoodName</strong></label>
+            <input type="text" placeholder="Enter Name" formControlName="foodName" required>
+            <span class="help-bpx" *ngIf="foodName?.touched && !foodName?.valid">Please Enter valid Food Name</span><p></p>
+
+
+
+            <label for="price"><strong>Price</strong></label>
+            <input type="text" placeholder="Enter Price" name="price" formControlName="price" required>
+            <span class="help-bpx" *ngIf="price?.touched && !price?.valid">Please Enter valid price</span><p>
+
+
+            <label for="offer"><strong>Offer</strong></label>
+            <input type="text" placeholder="Enter offer" name="offer" formControlName="offer" required>
+            <span class="help-bpx" *ngIf="offer?.touched && !offer?.valid">Please Enter valid offer</span><p></p>
+
+
+            <label for="foodCategory"><strong>Category</strong></label>
+            <input type="text" placeholder="Enter category" name="foodCategory" formControlName="foodCategory" required>
+            <span class="help-bpx" *ngIf="foodCategory?.touched && !foodCategory?.valid">Please Enter valid foodCategory </span><p>
+
+
+
+            <label for="quantity"><strong>Quantity</strong></label>
+            <input type="text" placeholder="Enter quantity" name="quantity" formControlName="quantity" required>
+            <span class="help-bpx" *ngIf="quantity?.touched && !quantity?.valid">Please Enter quantity</span><p>
+            <br>
+          
+      
+        </div>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn"  [disabled]="!foodForm.valid">Add Food</button>
+        </div>
+
+    </form>
+
+
+</div>

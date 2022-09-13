@@ -1,0 +1,74 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" id="name">
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+        width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+    </a>
+    <a class="navbar-brand" href="#">User Login</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">      
+      </ul>
+   
+    </div>
+    <a class="navbar-brand" href="#">Home</a>
+  </nav>
+
+
+  <br><br>
+<!-- <div><div><img src="../assets/images/backGround.jpg" width="100%" height="100%" alt=""></div></div> -->
+<div class="container">
+  
+  <div class="center-content">
+    <mat-card class="example-card">
+  
+      <h1>Login</h1>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="sendOtp()">
+          <mat-form-field class="example-full-width">
+            <input
+              type="email"
+              matInput
+              placeholder="Email"
+              class="form-control"
+              formControlName="userEmail"/>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <span class="help-bpx" *ngIf="userEmail?.touched && !userEmail?.valid"
+              >Please Enter valid Email</span>         
+        
+           <button
+            mat-raised-button
+            color="primary"
+            type="submit" [disabled]="!loginForm.valid">
+            Send Otp
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+
+<!-- <form [formGroup]='loginForm'  (ngSubmit)='sendOtp()'>
+    <label for="userEmail">Email: </label>
+    <input type="text"  formControlName="userEmail">
+
+    <button>Send Otp</button>
+</form> -->
+
+<div class="container" style="text-align: center;">
+      <label for="userPassword">Enter Otp: </label>
+      <input type="text" [(ngModel)] = 'otp'>
+      <button (click)="onSubmit()" >Login</button>
+</div>
+
+
+
+

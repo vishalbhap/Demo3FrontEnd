@@ -1,0 +1,99 @@
+<!-- <p>orders-list-user works!</p>
+
+<table  class="table">
+    <thead>
+      <tr>
+     
+        <th scope="col">Order ID</th>
+        <th scope="col">Order Status</th>
+        <th scope="col">Order Time</th>
+        <th scope="col">Total</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderList">
+     
+        <td>{{order.orderId}}</td>
+        <td>{{order.orderStatus}}</td>
+        <td>{{order.orderTime}}</td>
+        <td>{{order.total}}</td>
+        <td>{{order.user.userId}}</td>
+        <td><h4 (click)="checkOrderTimeStatus(order.orderId)">Cancel Order</h4></td>
+      </tr>
+    
+    </tbody>
+  </table> -->
+
+  <!-- <h1><button class="nav-link" href="#" routerLink="cartPage">View Cart 1</button></h1> -->
+
+
+  <body>
+  
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" id="name">
+        <img
+          src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+          width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+    
+      </a>
+      <a class="navbar-brand" href="#">User Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="d-flex align-items-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">    
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/userHome">Back</a>
+          </li>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+          <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/userHome">Logout</a>
+            </li>  
+        
+        </ul>
+       </div>
+    </nav>
+    
+    
+    <p>orders-list-user works!</p>
+    
+    <table  class="table">
+        <thead>
+          <tr>
+         
+            <th scope="col">Order ID</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Order Time</th>
+            <th scope="col">Total</th>
+            <th scope="col">User Id</th>
+            <th scope="col">Action/Status</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orderList">
+         
+            <td>{{order.orderId}}</td>
+            <td>{{order.orderStatus}}</td>
+            <td>{{order.orderTime}}</td>
+            <td>{{order.total}}</td>
+            <td>{{order.user.userId}}</td>
+            <td>
+              <button  *ngIf="order.orderStatus == 'placed'" type="button" class="btn btn-danger" (click)="checkOrderTimeStatus(order.orderId)">Cancel Order</button>
+              <h2 *ngIf="order.orderStatus == 'Rejected'">Order Rejected By Restaurant</h2>
+              <h2 *ngIf="order.orderStatus == 'Cancelled'">Order Cancelled By You</h2>
+            </td>
+          </tr>
+        
+        </tbody>
+      </table>
+    
+      <!-- <h1><button class="nav-link" href="#" routerLink="cartPage">View Cart 1</button></h1> -->
+    
+      
+    </body>

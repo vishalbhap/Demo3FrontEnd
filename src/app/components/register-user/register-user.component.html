@@ -1,0 +1,144 @@
+
+
+<!--   
+  <div class="container">
+    
+  <form [formGroup]='userForm'  (ngSubmit)='onSubmit()'>
+
+    <mat-form-field appearance="fill">
+      <label>Name</label>
+      <input matInput formControlName="userName">
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field appearance="fill">
+      <label>Password</label>
+      <input matInput formControlName="userPassword">
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field appearance="fill">
+      <label>Email</label>
+      <input matInput formControlName="userEmail">
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field appearance="fill">
+      <label>MobileNo</label>
+      <input matInput formControlName="userMobileNo">
+    </mat-form-field>
+    <br>
+  
+    <div formGroupName="address">
+  
+      <mat-form-field appearance="fill">
+        <label>Area</label>
+        <input matInput formControlName="area">
+      </mat-form-field>
+      <br>
+  
+      <mat-form-field appearance="fill">
+        <label>Street</label>
+        <input matInput formControlName="street">
+      </mat-form-field>
+      <br>
+  
+      <mat-form-field appearance="fill">
+        <label>Pincode</label>
+        <input matInput formControlName="pincode">
+      </mat-form-field>
+  
+    </div>
+  
+    <button>Submit</button>
+  </form>
+
+  </div> -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" id="name">
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+        width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+   
+    </a>
+    <a class="navbar-brand" href="#">Resgister User</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">      
+     </ul>
+    </div>
+    <a class="navbar-brand" href="#">Home</a>
+  </nav>
+
+
+
+<div class="mainDiv">
+  <form [formGroup]='userForm'  (ngSubmit)='onSubmit()' style="border:1px solid #ccc">
+    <div class="container">
+     <h1><strong>Sign Up</strong></h1>
+    
+
+      <hr>
+  
+  
+      <label><strong>Name</strong></label>
+      <input type="text" placeholder="Enter Name"  formControlName="userName" required>
+      <span class="help-bpx" *ngIf="userName?.touched && !userName?.valid">Please Enter valid User Name</span><p></p>
+     
+       
+   
+      <label for="psw"><strong>Password</strong></label>
+       <input type="password" placeholder="Enter Password" name="psw" formControlName="userPassword" required> 
+       <span class="help-bpx" *ngIf="userPassword?.touched && !userPassword?.valid">Please Enter valid Password</span><p>
+
+  
+      <label for="email"><strong>Email</strong></label>
+     <input type="text" placeholder="Enter Email" name="email" formControlName="userEmail" required>
+     <span class="help-bpx" *ngIf="userEmail?.touched && !userEmail?.valid">Please Enter valid Email</span><p></p>
+     
+
+     <label for="UserName"><strong>Enter Mobile No.</strong></label>
+     <input type="text" placeholder="Enter userName" name="UserName" formControlName="userMobileNo" required>
+     <span class="help-bpx" *ngIf="userMobileNo?.touched && !userMobileNo?.valid">Please Enter valid Mobile No</span><p>
+
+      <div formGroupName="address">
+     
+          <label for="area"><strong>Area</strong></label>
+          <input type="text" placeholder="Enter Area" name="area" formControlName="area" required> 
+          <span class="help-bpx" *ngIf="userArea?.touched && !userArea?.valid">Please Enter valid Area</span><p>
+
+        <br>
+      <label for="street"><strong>Street</strong></label>
+      <input type="text" placeholder="Enter Street" name="street" formControlName="street" required> 
+      <span class="help-bpx" *ngIf="userStreet?.touched && !userStreet?.valid">Please Enter valid Street</span> <p></p>
+  
+        <br>
+          <label for="pincode"><strong>Pincode</strong></label>
+          <input type="text" placeholder="Enter pincode" name="pincode" formControlName="pincode" required> 
+          <span class="help-bpx" *ngIf="userPincode?.touched && !userPincode?.valid">Please Enter valid Pincode</span><p>
+
+      </div>
+    
+      <div class="clearfix">
+        <button type="submit" class="signupbtn"  [disabled]="!userForm.valid">Sign Up</button>
+      </div>
+    </div>
+  </form>
+  
+  
+</div>
+
+
+
+
+
+
+
+  
+  
+  
+

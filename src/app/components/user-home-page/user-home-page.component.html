@@ -1,0 +1,131 @@
+<!-- <p>user-home-page works!</p>
+
+
+
+  <h2>All Restaurants </h2>
+
+  <input type="text" [(ngModel)]='searchBy'>
+    we are searching by Area {{searchBy}} 
+
+
+  <table  class="table">
+    <thead>
+      <tr>
+     
+        <th scope="col">Restaurant Name</th>
+        <th scope="col">Restaurant Email</th>
+        <th scope="col">Distance</th>
+        <th scope="col">Area</th>
+
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rest of restArray | searchRestArea : searchBy">
+     
+        <td>{{rest.restaurantName}}</td>
+        <td>{{rest.restaurantEmail}}</td>
+        <td>{{rest.distance}}</td>
+        <td>{{rest.address.area}}</td>
+
+        <td (click)="showFoods(rest.restId)"> Show Available Foods </td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+  <h1><button class="nav-link" href="#" routerLink="showOrdersForUser">Show All Orders</button></h1>
+  <h1><button class="nav-link" href="#" routerLink="updateUserProfile">Update User Profile</button></h1>
+  <h1><button class="nav-link" href="#" routerLink="changePassword">Change Password</button></h1>
+
+  <router-outlet></router-outlet> -->
+
+
+
+  <body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     
+      <a class="navbar-brand" href="#" id="name">
+        <img
+          src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+          width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+        
+      </a>
+      <a class="navbar-brand" href="#">User Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+  
+       <div class="d-flex align-items-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"> 
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/userHome/showOrdersForUser" >Orders</a>
+          </li>&nbsp;&nbsp;&nbsp;
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/userHome/updateUserProfile">Profile</a>
+          </li>        &nbsp;&nbsp;&nbsp;
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/userHome/changePassword" >Change Password</a>
+          </li>  &nbsp;&nbsp;&nbsp;
+  
+          <li class="nav-item">
+              <a class="nav-link"href="#" routerLink="" ><div (click)="signOut()" class="signoutTag">Sign-out</div></a>
+            </li>
+        </ul>
+        
+       </div>
+    </nav>
+  
+    <!-- <p>user-home-page works!</p> -->
+  
+  
+  
+    <h1 style="text-align: center;"><strong> Restaurants</strong> </h1>
+  
+    <!-- <input type="text" [(ngModel)]='searchBy'>
+      we are searching by Area {{searchBy}}  -->
+  
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search by area" aria-label="Search" aria-describedby="search-addon" [(ngModel)]='searchBy'  />
+        <button type="button" class="btn btn-outline-primary">search</button>
+      </div>
+  <p></p>
+  <p></p>
+  
+    <table  class="table">
+      <thead>
+        <tr>
+       
+          <th scope="col">Restaurant Name</th>
+          <th scope="col">Restaurant Email</th>
+          <th scope="col">Distance</th>
+          <th scope="col">Area</th>
+  
+          <th scope="col">Action</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rest of restArray | searchRestArea : searchBy">
+       
+          <td>{{rest.restaurantName}}</td>
+          <td>{{rest.restaurantEmail}}</td>
+          <td>{{rest.distance}}</td>
+          <td>{{rest.address.area}}</td>
+  <!-- 
+          <td (click)="showFoods(rest.restId)"> Show Available Foods 
+          </td> -->
+          <td><button type="button" class="btn btn-success"(click)="showFoods(rest.restId)">Menu</button>
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+  
+    <router-outlet></router-outlet>
+  
+  
+  </body>

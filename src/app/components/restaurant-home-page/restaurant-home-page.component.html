@@ -1,0 +1,114 @@
+<!-- <p>restaurant-home-page works!</p>
+
+<table  class="table">
+    <thead>
+      <tr>
+     
+        <th scope="col">FoodName</th>
+        <th scope="col">Food Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Offer</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Restaurant Name</th>
+        <th scope="col">Area</th>
+        <th scope="col">Action</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let food of foodArray">
+     
+        <td>{{food.foodName}}</td>
+        <td>{{food.foodCategory}}</td>
+        <td>{{food.price}}</td>
+        <td>{{food.offer}}</td>
+        <td>{{food.quantity}}</td>
+        <td>{{food.restaurant.restaurantName}}</td>
+        <td>{{food.restaurant.address.area}}</td>
+        <td><h4 (click)="editPage(food.foodId)">Edit</h4></td>
+        <td><h4 (click)="deleteFood(food.foodId)">Delete</h4></td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+  <h1><button class="nav-link" href="#" routerLink="addFood">Add New Food</button></h1>
+
+  <h1><button class="nav-link" href="#" routerLink="AllOrdersByRestId">Check all Orders</button></h1>
+
+  <h1><button class="nav-link" href="#" routerLink="updateRestaurant">Update Restaurant</button></h1> -->
+
+  <body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" id="name">
+        <img
+          src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+          width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+          <!-- <h1>Navbar</h1> -->
+      </a>
+      <a class="navbar-brand" href="#">Restaurant Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+   
+      <div class="d-flex align-items-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">    
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/restaurantHome/addFood" >Add New Food</a>
+          </li>  
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/restaurantHome/AllOrdersByRestId" >Check all Orders</a>
+          </li>  
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/restaurantHome/updateRestaurant">Update Restaurant</a>
+          </li> 
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="" (click)="signOut()">SignOut</a>
+            </li> 
+        
+        </ul>
+       </div>
+    </nav>
+  
+  
+  <table  class="table">
+      <thead>
+        <tr>
+       
+          <th scope="col">FoodName</th>
+          <th scope="col">Food Category</th>
+          <th scope="col">Price</th>
+          <th scope="col">Offer</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Restaurant Name</th>
+          <th scope="col">Area</th>
+          <th scope="col">Action</th>
+         
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let food of foodArray">
+       
+          <td>{{food.foodName}}</td>
+          <td>{{food.foodCategory}}</td>
+          <td>{{food.price}}</td>
+          <td>{{food.offer}}</td>
+          <td>{{food.quantity}}</td>
+          <td>{{food.restaurant.restaurantName}}</td>
+          <td>{{food.restaurant.address.area}}</td>
+          <td><button type="button" class="btn btn-primary" (click)="editPage(food.foodId)">Edit</button>&nbsp;
+            <button type="button" class="btn btn-danger" (click)="deleteFood(food.foodId)">Delete</button></td>
+         
+        </tr>
+      
+      </tbody>
+    </table>
+  
+  
+  </body>

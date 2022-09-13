@@ -1,0 +1,81 @@
+<!-- <p>rest-login works!</p>
+
+<form [formGroup]='loginForm'  (ngSubmit)='onSubmit()'>
+    <label for="userEmail">Email: </label>
+    <input type="text"  formControlName="restaurantEmail">
+
+    <label for="userPassword">Password: </label>
+    <input type="text"  formControlName="restaurantPassword">
+
+    <button>Submit</button>
+</form> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" id="name">
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/chef-man-white-256.png"
+        width="35" height="35" class="d-inline-block align-top" alt="Lab Logo">&nbsp;&nbsp;&nbsp;
+        <!-- <h1>Navbar</h1> -->
+    </a>
+    <a class="navbar-brand" href="#">Restaurant Login</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <a class="navbar-brand" href="#" style="text-align: right;">Home</a>
+  </nav>
+     
+
+
+<br><br><br><br>
+
+
+
+
+<div class="container">
+  
+  <div class="center-content">
+    <mat-card class="example-card">
+      <!-- <mat-card-header>
+          <mat-card-title>Register</mat-card-title>
+        </mat-card-header> -->
+      <h1>Restaurant Login</h1>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <mat-form-field class="example-full-width">
+            <input
+              type="email"
+              matInput
+              placeholder="Email"
+              class="form-control"
+              formControlName="restaurantEmail"/>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <span class="help-bpx" *ngIf="restaurantEmail?.touched && !restaurantEmail?.valid"
+              >Please Enter valid Email</span>
+         
+
+          <mat-form-field class="example-full-width">
+            <input
+              type="password"
+              matInput
+              placeholder="password"
+              class="form-control"
+              formControlName="restaurantPassword"/>
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <span class="help-bpx" *ngIf="restaurantPassword?.touched && !restaurantPassword?.valid"
+              >Please Enter valid Password</span>
+
+           <button
+            mat-raised-button
+            color="primary"
+            type="submit"  type="submit" [disabled]="!loginForm.valid">
+            Login
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

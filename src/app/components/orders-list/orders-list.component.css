@@ -1,0 +1,25 @@
+a {
+  font: 25px italic;
+  color: white;
+}
+
+ul {
+  padding-left: 1000px;
+}
+
+.mainDiv {
+  background-image: linear-gradient(rgba(0, 12, 182, 0), rgb(110, 214, 188));
+}
+
+th {
+  font-size: 22px;
+  text-align: center;
+}
+
+td {
+  font-size: 15px;
+  font-weight: bold;
+  font: italic;
+  text-align: center;
+}
+/*# sourceMappingURL=orders-list.component.css.map */
